@@ -2,6 +2,7 @@ import express from 'express';
 import { urlencoded } from 'express';
 import * as dotenv from 'dotenv';
 import router from './app/router.js';
+import mainController from './app/controllers/mainController.js';
 dotenv.config();
 
 const port = process.env.PORT;
