@@ -8,10 +8,11 @@ dotenv.config();
 const port = process.env.PORT;
 const app = express();
 
-// on configure le moteur de template
-app.set('view engine', 'ejs');
 // on configure le chemin vers vers le dossier des vues
 app.set('views', './app/views/');
+// on configure le moteur de template
+app.set('view engine', 'ejs');
+
 
 app.use(express.urlencoded({ extended: true }));
 
