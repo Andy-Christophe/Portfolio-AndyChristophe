@@ -22,7 +22,7 @@ a {
 nav {
   height: 5rem;
   text-align: right;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.514);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.514);
   display: flex;
   margin-left: 5rem;
   margin-right: 5rem;
@@ -36,7 +36,7 @@ nav a {
 .gridAccueil {
   padding-top: 2rem;
   display: grid;
-  grid-template-columns: 500px 500px 200px 400px;
+  grid-template-columns: 560px 560px 80px 400px;
   grid-template-rows: 250px 250px 250px;
   gap: 1rem;
   grid-template-areas: "box-1 box-1 box-2 box-3" "box-1 box-1 box-2 box-4" "box-5 box-5 box-5 box-4";
