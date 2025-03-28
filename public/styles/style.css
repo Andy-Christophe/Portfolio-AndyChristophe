@@ -1,7 +1,89 @@
+.gridCard-box-2 {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+  top: 0;
+  left: 0;
+}
+.gridCard-box-2 svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+.gridCard-box-2 .circle-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+}
+.gridCard-box-2 .circle1 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: center center;
+  animation: moveVertical 30s ease infinite;
+  opacity: 1;
+}
+.gridCard-box-2 .circle2 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: calc(50% - 400px);
+  animation: moveInCircle 20s reverse infinite;
+  opacity: 1;
+}
+.gridCard-box-2 .circle3 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2 + 200px);
+  left: calc(50% - var(--circle-size) / 2 - 500px);
+  transform-origin: calc(50% + 400px);
+  animation: moveInCircle 40s linear infinite;
+  opacity: 1;
+}
+.gridCard-box-2 .circle4 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  top: calc(50% - var(--circle-size) / 2);
+  left: calc(50% - var(--circle-size) / 2);
+  transform-origin: calc(50% - 200px);
+  animation: moveHorizontal 40s ease infinite;
+  opacity: 0.7;
+}
+.gridCard-box-2 .circle5 {
+  position: absolute;
+  background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+  mix-blend-mode: var(--blending);
+  width: calc(var(--circle-size) * 2);
+  height: calc(var(--circle-size) * 2);
+  top: calc(50% - var(--circle-size));
+  left: calc(50% - var(--circle-size));
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation: moveInCircle 20s ease infinite;
+  opacity: 1;
+}
+
 html {
   font-family: "Jost";
   transition: 1s;
-  background-color: rgb(15, 13, 27);
+  background-color: rgb(30, 26, 54);
 }
 
 body {
@@ -14,7 +96,7 @@ body {
 }
 
 .navbar {
-  background-color: rgb(22, 19, 39);
+  background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
   left: 1rem;
   border-radius: 1rem;
@@ -51,11 +133,16 @@ body {
   display: flex;
 }
 
-.gridAccueil {
-  padding-top: 5rem;
-  display: grid;
+.flexAccueil {
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.gridAccueil {
+  display: grid;
   grid-template-columns: 60px 550px 550px 350px;
   grid-template-rows: 300px 250px 250px;
   gap: 0.5rem;
@@ -63,7 +150,7 @@ body {
 }
 
 .gridCard {
-  background-color: rgb(22, 19, 39);
+  background-color: #453c77;
   border-radius: 1rem;
   transition: 0.5s;
 }
@@ -71,40 +158,78 @@ body {
 .gridCard-box-1:hover {
   box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
+  z-index: 100;
 }
 
+.gridCard-box-2 {
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+  width: 100%;
+  height: 100%;
+}
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
 .gridCard-box-2:hover {
   box-shadow: 0px -13px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
+  z-index: 100;
 }
 
 .gridCard-box-3:hover {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
-}
-
-.cardStacks {
-  background: rgba(15, 13, 27, 0.425);
-  margin: 0.5rem;
-  height: 75%;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 800"><rect fill="%23000000" width="800" height="800"/><g fill-opacity="1"><circle fill="%23000000" cx="400" cy="400" r="600"/><circle fill="%23040408" cx="400" cy="400" r="500"/><circle fill="%23090810" cx="400" cy="400" r="400"/><circle fill="%230d0b17" cx="400" cy="400" r="300"/><circle fill="%23120f1f" cx="400" cy="400" r="200"/><circle fill="%23161327" cx="400" cy="400" r="100"/></g></svg>');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  opacity: 0.5;
-}
-.cardStacks:hover {
-  opacity: 1;
+  z-index: 100;
 }
 
 .gridCard-box-4:hover {
   box-shadow: 9px 9px 30px 6px rgba(35, 30, 61, 0.231372549);
   transform: scale(1.05);
+  z-index: 100;
 }
 
 .gridCard-box-5:hover {
   box-shadow: -9px 9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
+  z-index: 100;
 }
 
 .logoSocial {
