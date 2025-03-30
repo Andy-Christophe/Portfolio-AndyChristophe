@@ -137,18 +137,86 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   height: 100vh;
   width: 100%;
 }
 
 .gridAccueil {
   display: grid;
-  grid-template-columns: 60px 550px 550px 350px;
-  grid-template-rows: 300px 250px 250px;
   gap: 0.5rem;
-  grid-template-areas: "box-1 box-2 box-2 box-3" "box-1 box-2 box-2 box-4" "box-5 box-5 box-5 box-4";
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
+@media screen and (max-width: 1025px) {
+  .navbar {
+    left: unset;
+    bottom: 1rem;
+    z-index: 1000;
+  }
+  .navbar nav {
+    flex-direction: row;
+  }
+  .navbar nav:hover .navhover {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) {
+  .gridAccueil {
+    grid-template-columns: 15rem 5rem;
+    grid-template-rows: 30rem 15rem 15rem 15rem 0;
+    grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
+    padding-top: 30rem;
+  }
+  .gridCard-box-5 {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .gridAccueil {
+    grid-template-columns: 35rem 5rem;
+    grid-template-rows: 30rem 15rem 15rem 15rem 0;
+    grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
+    padding-top: 30rem;
+  }
+  .gridCard-box-5 {
+    display: none;
+  }
+}
+@media screen and (min-width: 850px) {
+  .gridAccueil {
+    grid-template-columns: 45rem 5rem;
+    grid-template-rows: 30rem 15rem 15rem 0;
+    grid-template-areas: "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
+    padding-top: 15rem;
+  }
+  .gridCard-box-5 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .gridAccueil {
+    grid-template-columns: 4rem 15rem 35rem;
+    grid-template-rows: 15rem 15rem 15rem 15rem;
+    grid-template-areas: "box-1 box-2 box-2" "box-1 box-2 box-2" "box-3 box-3 box-4" "box-5 box-5 box-5";
+    padding-top: 15rem;
+  }
+  .gridCard-box-5 {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .gridAccueil {
+    grid-template-columns: 4rem 50rem 15rem;
+    grid-template-rows: 15rem 15rem 15rem;
+    grid-template-areas: "box-1 box-2 box-3" "box-1 box-2 box-4" "box-5 box-5 box-4";
+    padding-top: unset;
+  }
+  .gridCard-box-5 {
+    display: flex;
+  }
+}
 .gridCard {
   background-color: #453c77;
   border-radius: 1rem;
