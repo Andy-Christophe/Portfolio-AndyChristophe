@@ -98,39 +98,31 @@ body {
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
-  left: 1rem;
-  border-radius: 1rem;
+  left: -4.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   transition: all 0.5s;
+  padding: 1rem;
 }
 .navbar:hover {
-  transform: scale(1.1);
+  left: 0rem;
   box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.233);
 }
 .navbar nav {
   display: flex;
   flex-direction: column;
-}
-.navbar nav .navhover {
-  display: none;
-  margin-left: 1rem;
-}
-.navbar nav .a-top {
-  margin-top: 1rem;
+  gap: 0.5rem;
 }
 .navbar nav a {
-  margin: 0.5rem;
-  margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar nav a img {
-  height: 25px;
-  width: 28px;
-}
-.navbar nav:hover .navhover {
-  display: flex;
+.navbar nav svg {
+  margin-left: 1rem;
+  height: 2rem;
 }
 
 .flexAccueil {
@@ -154,12 +146,21 @@ body {
     left: unset;
     bottom: 1rem;
     z-index: 1000;
+    border-radius: 1rem;
+  }
+  .navbar:hover {
+    left: unset;
+    transform: scale(1.1);
   }
   .navbar nav {
     flex-direction: row;
   }
-  .navbar nav:hover .navhover {
+  .navbar nav .label-lien {
     display: none;
+  }
+  .navbar nav svg {
+    margin-left: unset;
+    gap: 1rem;
   }
 }
 @media screen and (min-width: 0px) {
