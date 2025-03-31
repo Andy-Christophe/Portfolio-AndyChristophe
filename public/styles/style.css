@@ -166,9 +166,9 @@ body {
 @media screen and (min-width: 0px) {
   .gridAccueil {
     grid-template-columns: 15rem 5rem;
-    grid-template-rows: 30rem 15rem 15rem 15rem 0;
+    grid-template-rows: 25rem 15rem 15rem 15rem 0;
     grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
-    padding-top: 30rem;
+    padding-top: 20rem;
   }
   .gridCard-box-5 {
     display: none;
