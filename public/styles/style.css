@@ -3,7 +3,6 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
   top: 0;
   left: 0;
 }
@@ -126,6 +125,7 @@ body {
   padding-right: 0.5rem;
 }
 .navbar nav a:hover {
+  transition: 0.5s;
   background-color: rgba(255, 255, 255, 0.183);
   border-radius: 1rem;
 }
@@ -159,7 +159,7 @@ body {
   }
   .navbar:hover {
     left: unset;
-    transform: scale(1.1);
+    box-shadow: unset;
   }
   .navbar nav {
     flex-direction: row;
@@ -182,6 +182,9 @@ body {
   .gridCard-box-5 {
     display: none;
   }
+  .gridCard-box-2 {
+    background-color: #0f0d1b;
+  }
 }
 @media screen and (min-width: 700px) {
   .gridAccueil {
@@ -194,8 +197,8 @@ body {
     display: none;
   }
   .gridCard-box-2 {
-    --color-bg1: rgb(108, 0, 162);
-    --color-bg2: rgb(0, 17, 82);
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
     --color1: 18, 113, 255;
     --color2: 221, 74, 255;
     --color3: 100, 220, 255;
@@ -250,8 +253,8 @@ body {
     display: none;
   }
   .gridCard-box-2 {
-    --color-bg1: rgb(108, 0, 162);
-    --color-bg2: rgb(0, 17, 82);
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
     --color1: 18, 113, 255;
     --color2: 221, 74, 255;
     --color3: 100, 220, 255;
@@ -306,8 +309,8 @@ body {
     display: flex;
   }
   .gridCard-box-2 {
-    --color-bg1: rgb(108, 0, 162);
-    --color-bg2: rgb(0, 17, 82);
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
     --color1: 18, 113, 255;
     --color2: 221, 74, 255;
     --color3: 100, 220, 255;
@@ -362,8 +365,8 @@ body {
     display: flex;
   }
   .gridCard-box-2 {
-    --color-bg1: rgb(108, 0, 162);
-    --color-bg2: rgb(0, 17, 82);
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
     --color1: 18, 113, 255;
     --color2: 221, 74, 255;
     --color3: 100, 220, 255;
@@ -408,11 +411,10 @@ body {
   }
 }
 .gridCard {
-  background-color: #453c77;
+  background: linear-gradient(40deg, #453d78, #5b4fa0);
   border-radius: 1rem;
   transition: 0.5s;
 }
-
 .gridCard-box-1:hover {
   box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
@@ -424,7 +426,6 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  background-color: #0f0d1b;
 }
 .gridCard-box-2:hover {
   box-shadow: 0px -13px 30px 6px rgba(35, 30, 61, 0.233);
@@ -432,18 +433,62 @@ body {
   z-index: 100;
 }
 
+.gridCard-box-3 .cardStacks {
+  position: relative;
+  background: rgba(15, 13, 27, 0.425);
+  border-radius: 1rem;
+  margin: 0.5rem;
+  height: 90%;
+  opacity: 0.5;
+}
+.gridCard-box-3 .cardStacks .stacks {
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.gridCard-box-3 .cardStacks .stacks1 {
+  top: 42%;
+  left: 42%;
+}
+.gridCard-box-3 .cardStacks .stacks2 {
+  top: 10%;
+  left: 5%;
+}
+.gridCard-box-3 .cardStacks .stacks3 {
+  top: 60%;
+  left: 10%;
+}
+.gridCard-box-3 .cardStacks .stacks4 {
+  top: 20%;
+  left: 75%;
+}
+.gridCard-box-3 .cardStacks .stacks5 {
+  top: 70%;
+  left: 70%;
+}
+.gridCard-box-3 .cardStacks:hover {
+  opacity: 1;
+}
 .gridCard-box-3:hover {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
 }
 
+.gridCard-box-4 {
+  background-color: #453c77;
+}
 .gridCard-box-4:hover {
   box-shadow: 9px 9px 30px 6px rgba(35, 30, 61, 0.231372549);
   transform: scale(1.05);
   z-index: 100;
 }
 
+.gridCard-box-5 {
+  background-color: #453c77;
+}
 .gridCard-box-5:hover {
   box-shadow: -9px 9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
