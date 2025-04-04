@@ -1,19 +1,24 @@
 <%- include('partials/header'); -%>
-<main>
-  <div class="flexAccueil">
-    <div class="gridAccueil">
-      <div class="gridCard gridCard-box-1" style="grid-area: box-1">
-        <div class="logoSocial">
-          <a href="https://github.com/Andy-Christophe"
-            ><img src="/img/github.png" alt=""
-          /></a>
-          <a href="https://www.linkedin.com/in/andy-christophe-4641b6188/"
-            ><img src="/img/linkedin.png" alt=""
-          /></a>
-          <a href=""><img src="/img/Instagram_icon.png" alt="" /></a>
+
+  <script>
+
+    window.addEventListener("DOMContentLoaded", (event) => {
+      const about = document.querySelector('#about');
+      about.addEventListener('click', res.render('about'));});
+  
+
+  </script>
+  <main>
+    <div class="flexAccueil">
+      <div class="gridAccueil">
+        <div class="gridCard gridCard-box-1" style="grid-area: box-1">
+          <div class="logoSocial">
+            <a href="https://github.com/Andy-Christophe"><img src="/img/github.png" alt="" /></a>
+            <a href="https://www.linkedin.com/in/andy-christophe-4641b6188/"><img src="/img/linkedin.png" alt="" /></a>
+            <a href=""><img src="/img/Instagram_icon.png" alt="" /></a>
+          </div>
         </div>
-      </div>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg">
                     <defs>
                       <filter id="goo">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -23,50 +28,43 @@
                     </defs>
                   </svg>
       <!-- VOIR SI COMMENT LE METTRE DANS LE CSS -->
-      <div class="gridCard gridCard-box-2" style="grid-area: box-2">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur
-                in="SourceGraphic"
-                stdDeviation="10"
-                result="blur"
-              />
-              <feColorMatrix
-                in="blur"
-                mode="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                result="goo"
-              />
-              <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-          </defs>
-        </svg>
-        <h1>FRONT-END <span>DEVELOPER</span></h1>
-        <div class="circle-container">
-          <div class="circle1"></div>
-          <div class="circle2"></div>
-          <div class="circle3"></div>
-          <div class="circle4"></div>
-          <div class="circle5"></div>
+        <div class="gridCard gridCard-box-2" style="grid-area: box-2" id="about">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          <h1>FRONT-END <span>DEVELOPER</span></h1>
+          <div class="circle-container">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+            <div class="circle5"></div>
+          </div>
         </div>
-      </div>
-      <div class="gridCard gridCard-box-3" style="grid-area: box-3">
-        <div class="cardStacks">
-          <div class="stacks stacks1"></div>
-          <div class="stacks stacks2"></div>
-          <div class="stacks stacks3"></div>
-          <div class="stacks stacks4"></div>
-          <div class="stacks stacks5"></div>
+        <div class="gridCard gridCard-box-3" style="grid-area: box-3">
+          <h2 class="titleStack">Stack</h2>
+          <div class="cardStacks">
+            <div class="stacks stack1"><i class="fa-brands fa-js fa-5x"></i></div>
+            <div class="stacks stack2"><i class="fa-brands fa-react fa-5x"></i></div>
+            <div class="stacks stack3"><i class="fa-brands fa-node-js fa-5x"></i></div>
+            <div class="stacks stack4"><i class="fa-brands fa-html5 fa-5x"></i></div>
+            <div class="stacks stack5"><i class="fa-brands fa-sass fa-5x"></i></div>
+          </div>
         </div>
-      </div>
-      <div class="gridCard gridCard-box-4" style="grid-area: box-4">
-        <p>project</p>
-      </div>
-      <div class="gridCard gridCard-box-5" style="grid-area: box-5">
-        <p>minijeu</p>
+        <div class="gridCard gridCard-box-4" style="grid-area: box-4">
+          <p>project</p>
+        </div>
+        <div class="gridCard gridCard-box-5" style="grid-area: box-5">
+          <p>minijeu</p>
+        </div>
       </div>
     </div>
-  </div>
-</main>
-<%- include('partials/footer'); -%>
+  </main>
+  <%- include('partials/footer'); -%>

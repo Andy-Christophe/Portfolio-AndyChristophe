@@ -433,48 +433,55 @@ body {
   z-index: 100;
 }
 
-.gridCard-box-3 .cardStacks {
+.gridCard-box-3 {
   position: relative;
-  background: rgba(15, 13, 27, 0.425);
-  border-radius: 1rem;
-  margin: 0.5rem;
-  height: 90%;
-  opacity: 0.5;
+  display: flex;
+  justify-content: center;
 }
-.gridCard-box-3 .cardStacks .stacks {
-  background-color: black;
+.gridCard-box-3 .titleStack {
   position: absolute;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-.gridCard-box-3 .cardStacks .stacks1 {
-  top: 42%;
-  left: 42%;
-}
-.gridCard-box-3 .cardStacks .stacks2 {
-  top: 10%;
-  left: 5%;
-}
-.gridCard-box-3 .cardStacks .stacks3 {
-  top: 60%;
-  left: 10%;
-}
-.gridCard-box-3 .cardStacks .stacks4 {
-  top: 20%;
-  left: 75%;
-}
-.gridCard-box-3 .cardStacks .stacks5 {
-  top: 70%;
-  left: 70%;
-}
-.gridCard-box-3 .cardStacks:hover {
-  opacity: 1;
 }
 .gridCard-box-3:hover {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
+}
+.gridCard-box-3 .cardStacks {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+          mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0));
+}
+@keyframes left {
+  to {
+    left: -100%;
+  }
+}
+.gridCard-box-3 .cardStacks .stacks {
+  position: absolute;
+  left: 100%;
+  bottom: 20%;
+  animation-name: left;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.gridCard-box-3 .cardStacks .stack1 {
+  animation-delay: -26.25s;
+}
+.gridCard-box-3 .cardStacks .stack2 {
+  animation-delay: -22.5s;
+}
+.gridCard-box-3 .cardStacks .stack3 {
+  animation-delay: -18.75s;
+}
+.gridCard-box-3 .cardStacks .stack4 {
+  animation-delay: -15s;
+}
+.gridCard-box-3 .cardStacks .stack5 {
+  animation-delay: -11.25s;
 }
 
 .gridCard-box-4 {
