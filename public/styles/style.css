@@ -185,6 +185,51 @@ body {
   .gridCard-box-2 {
     background-color: #0f0d1b;
   }
+  .gridCard-box-2 {
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+  }
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
 }
 @media screen and (min-width: 700px) {
   .gridAccueil {
@@ -410,6 +455,62 @@ body {
     }
   }
 }
+@media screen and (min-width: 1600px) {
+  .gridAccueil {
+    grid-template-columns: 4rem 60rem 20rem;
+    grid-template-rows: 18rem 18rem 18rem;
+    grid-template-areas: "box-1 box-2 box-3" "box-1 box-2 box-4" "box-5 box-5 box-4";
+    padding-top: unset;
+  }
+  .gridCard-box-5 {
+    display: flex;
+  }
+  .gridCard-box-2 {
+    --color-bg1: #453c77;
+    --color-bg2: #231f3d;
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+  }
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+}
 .gridCard {
   background: linear-gradient(40deg, #3b327a, #5244a3);
   border-radius: 1rem;
@@ -475,24 +576,33 @@ body {
   left: 100%;
   bottom: 20%;
   animation-name: left;
-  animation-duration: 20s;
+  animation-duration: 40s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 .gridCard-box-3 .cardStacks .stack1 {
-  animation-delay: -26.25s;
+  animation-delay: -35s;
 }
 .gridCard-box-3 .cardStacks .stack2 {
-  animation-delay: -22.5s;
+  animation-delay: -30s;
 }
 .gridCard-box-3 .cardStacks .stack3 {
-  animation-delay: -18.75s;
+  animation-delay: -25s;
 }
 .gridCard-box-3 .cardStacks .stack4 {
-  animation-delay: -15s;
+  animation-delay: -20s;
 }
 .gridCard-box-3 .cardStacks .stack5 {
-  animation-delay: -11.25s;
+  animation-delay: -15s;
+}
+.gridCard-box-3 .cardStacks .stack6 {
+  animation-delay: -10s;
+}
+.gridCard-box-3 .cardStacks .stack7 {
+  animation-delay: -5s;
+}
+.gridCard-box-3 .cardStacks .stack8 {
+  animation-delay: 0s;
 }
 
 .gridCard-box-4 {
