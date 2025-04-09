@@ -14,7 +14,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+i{
+  height: 25px;
+}
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
@@ -304,38 +306,29 @@ body {
       left: 100%;
       bottom: 20%;
       animation-name: left;
-      animation-duration: 40s;
+      animation-duration: 30s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
 
     .stack1 {
-      animation-delay: calc(40s / 8 * (8 - 1) * -1);
+      animation-delay: calc(30s / 5 * (5 - 1) * -1);
     }
 
     .stack2 {
-      animation-delay: calc(40s / 8 * (8 - 2) * -1);
+      animation-delay: calc(30s / 5 * (5 - 2) * -1);
     }
 
     .stack3 {
-      animation-delay: calc(40s / 8 * (8 - 3) * -1);
+      animation-delay: calc(30s / 5 * (5 - 3) * -1);
     }
 
     .stack4 {
-      animation-delay: calc(40s / 8 * (8 - 4) * -1);
+      animation-delay: calc(30s / 5 * (5 - 4) * -1);
     }
 
     .stack5 {
-      animation-delay: calc(40s / 8 * (8 - 5) * -1);
-    }
-    .stack6 {
-      animation-delay: calc(40s / 8 * (8 - 6) * -1);
-    }
-    .stack7 {
-      animation-delay: calc(40s / 8 * (8 - 7) * -1);
-    }
-    .stack8 {
-      animation-delay: calc(40s / 8 * (8 - 8) * -1);
+      animation-delay: calc(30s / 5 * (5 - 5) * -1);
     }
   }
 }

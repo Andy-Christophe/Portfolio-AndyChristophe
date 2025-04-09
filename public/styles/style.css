@@ -94,6 +94,10 @@ body {
   align-items: center;
 }
 
+i {
+  height: 25px;
+}
+
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
@@ -576,32 +580,23 @@ body {
   left: 100%;
   bottom: 20%;
   animation-name: left;
-  animation-duration: 40s;
+  animation-duration: 30s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 .gridCard-box-3 .cardStacks .stack1 {
-  animation-delay: -35s;
+  animation-delay: -24s;
 }
 .gridCard-box-3 .cardStacks .stack2 {
-  animation-delay: -30s;
+  animation-delay: -18s;
 }
 .gridCard-box-3 .cardStacks .stack3 {
-  animation-delay: -25s;
+  animation-delay: -12s;
 }
 .gridCard-box-3 .cardStacks .stack4 {
-  animation-delay: -20s;
+  animation-delay: -6s;
 }
 .gridCard-box-3 .cardStacks .stack5 {
-  animation-delay: -15s;
-}
-.gridCard-box-3 .cardStacks .stack6 {
-  animation-delay: -10s;
-}
-.gridCard-box-3 .cardStacks .stack7 {
-  animation-delay: -5s;
-}
-.gridCard-box-3 .cardStacks .stack8 {
   animation-delay: 0s;
 }
 
