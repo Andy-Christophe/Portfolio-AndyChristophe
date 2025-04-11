@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
   top: 0;
   left: 0;
 }
@@ -16,7 +17,6 @@
   filter: url(#goo) blur(40px);
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 .gridCard-box-2 .circle1 {
   position: absolute;
@@ -622,13 +622,11 @@ i {
 }
 
 .stackShow .stacks {
-  background-color: #1e1a36;
   border-radius: 0.5rem;
   position: absolute;
   height: 50px;
   width: 50px;
   z-index: 1000;
-  box-shadow: 4px 3px 0 2px #362f61;
   transform: skew(-4deg);
 }
 .stackShow .stack1 {
