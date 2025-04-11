@@ -1,9 +1,33 @@
 @use "./mixin.scss";
 
+@keyframes miniCardMouvement {
+  0% {
+    translate: 0 8px;
+  }
+
+  50% {
+    translate: 0 -16px;
+  }
+
+  100% {
+    translate: 0 8px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   font-family: "Jost";
   transition: 1s;
-  background-color: rgb(30, 26, 54);
+  background-color: #1e1a36;
 }
 
 body {
@@ -13,10 +37,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s;
 }
-i{
+
+i {
   height: 25px;
 }
+
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
@@ -76,6 +103,7 @@ i{
   gap: 0.5rem;
   max-height: fit-content;
 }
+
 @media screen and (max-width: 1025px) {
   .navbar {
     left: unset;
@@ -123,6 +151,7 @@ i{
   .gridCard-box-2 {
     background-color: #0f0d1b;
   }
+
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
@@ -211,6 +240,7 @@ i{
     @include mixin.bubbles;
   }
 }
+
 @media screen and (min-width: 1600px) {
   .gridAccueil {
     grid-template-columns: 4rem 60rem 20rem;
@@ -251,7 +281,8 @@ i{
   height: 100%;
   display: flex;
   align-items: center;
-  .titleMain{
+
+  .titleMain {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -259,8 +290,9 @@ i{
     text-align: center;
     font-size: 2rem;
     color: white;
-    z-index: 1000;
+    z-index: 100000;
   }
+
   &:hover {
     box-shadow: 0px -13px 30px 6px rgba(35, 30, 61, 0.233);
     transform: scale(1.05);
@@ -268,69 +300,74 @@ i{
   }
 }
 
+
 .gridCard-box-3 {
   position: relative;
   display: flex;
   justify-content: center;
-  .titleStack{
+
+  .titleStack {
     position: absolute;
   }
+
   &:hover {
     box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
     transform: scale(1.05);
     z-index: 100;
   }
 
-  .cardStacks {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
+  // .cardStacks {
+  //   position: relative;
+  //   overflow: hidden;
+  //   width: 100%;
+  //   height: 100%;
+  //   mask-image: linear-gradient(to right,
+  //       rgba(0, 0, 0, 0),
+  //       rgba(0, 0, 0, 1) 20%,
+  //       rgba(0, 0, 0, 1) 80%,
+  //       rgba(0, 0, 0, 0));
 
-    @keyframes left {
+  //   @keyframes left {
 
-      to {
-        left: -100%;
-      }
-    }
+  //     to {
+  //       left: -100%;
+  //     }
+  //   }
 
-    .stacks {
-      position: absolute;
-      left: 100%;
-      bottom: 20%;
-      animation-name: left;
-      animation-duration: 30s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
+  //   .stacks {
+  //     position: absolute;
+  //     left: 100%;
+  //     bottom: 20%;
+  //     animation-name: left;
+  //     animation-duration: 10s;
+  //     animation-timing-function: linear;
+  //     animation-iteration-count: infinite;
+  //   }
 
-    .stack1 {
-      animation-delay: calc(30s / 5 * (5 - 1) * -1);
-    }
+  //   .stack1 {
+  //     animation-delay: calc(10s / 6 * (6 - 1) * -1);
+  //   }
 
-    .stack2 {
-      animation-delay: calc(30s / 5 * (5 - 2) * -1);
-    }
+  //   .stack2 {
+  //     animation-delay: calc(10s / 6 * (6 - 2) * -1);
+  //   }
 
-    .stack3 {
-      animation-delay: calc(30s / 5 * (5 - 3) * -1);
-    }
+  //   .stack3 {
+  //     animation-delay: calc(10s / 6 * (6 - 3) * -1);
+  //   }
 
-    .stack4 {
-      animation-delay: calc(30s / 5 * (5 - 4) * -1);
-    }
+  //   .stack4 {
+  //     animation-delay: calc(10s / 6 * (6 - 4) * -1);
+  //   }
 
-    .stack5 {
-      animation-delay: calc(30s / 5 * (5 - 5) * -1);
-    }
-  }
+  //   .stack5 {
+  //     animation-delay: calc(10s / 6 * (6 - 5) * -1);
+  //   }
+
+  //   .stack6 {
+  //     animation-delay: calc(10s / 6 * (6 - 6) * -1);
+  //   }
+  // }
 }
 
 
@@ -376,3 +413,59 @@ i{
     }
   }
 }
+.stackShow{
+
+
+
+  .stacks {
+    background-color: #1e1a36;
+    border-radius: 0.5rem;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 1000;
+    box-shadow: 4px 3px 0 2px #362f61;
+    transform: skew(-4deg);
+
+    
+  
+  }
+  
+  .stack1 {
+    top: 10%;
+    left: 10%;
+    animation: miniCardMouvement 4s ease-in-out infinite;
+    animation-delay: -0.2s;
+  }
+  
+  .stack2 {
+    top: 30%;
+    left: 50%;
+    animation: miniCardMouvement 4s ease-in-out infinite;
+    animation-delay: -1s;
+  }
+  
+  .stack3 {
+    top: 70%;
+    left: 15%;
+    animation: miniCardMouvement 4s ease-in-out infinite;
+    animation-delay:-0.5s;
+  }
+  
+  .stack4 {
+    top: 0%;
+    left: 80%;
+    animation: miniCardMouvement 4s ease-in-out infinite;
+    animation-delay: -0.3s;
+  }
+  
+  .stack5 {
+    top: 80%;
+    left: 65%;
+    animation: miniCardMouvement 4s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+}
+
+
+

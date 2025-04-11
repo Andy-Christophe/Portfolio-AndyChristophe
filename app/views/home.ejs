@@ -4,8 +4,9 @@
 
     window.addEventListener("DOMContentLoaded", (event) => {
       const about = document.querySelector('#about');
-      about.addEventListener('click', res.render('about'));});
-  
+      about.addEventListener('click', res.render('about'));
+    });
+
 
   </script>
   <main>
@@ -29,7 +30,7 @@
                   </svg>
       <!-- VOIR SI COMMENT LE METTRE DANS LE CSS -->
         <div class="gridCard gridCard-box-2" style="grid-area: box-2" id="about">
-          <svg xmlns="http://www.w3.org/2000/svg">
+          <svg class="svgblur" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -40,6 +41,11 @@
             </defs>
           </svg>
           <h1 class="titleMain">FRONT-END <span>DEVELOPER</span></h1>
+          <div class="minicards minicard1"></div>
+          <div class="minicards minicard2"></div>
+          <div class="minicards minicard3"></div>
+          <div class="minicards minicard4"></div>
+          <div class="minicards minicard5"></div>
           <div class="circle-container">
             <div class="circle1"></div>
             <div class="circle2"></div>
@@ -50,16 +56,26 @@
         </div>
         <div class="gridCard gridCard-box-3" style="grid-area: box-3">
           <h2 class="titleStack">Stack</h2>
-          <div class="cardStacks">
+          <div class="stackShow">
+            <div class="stacks stack1"><i class="fa-brands fa-js fa-3x"></i></div>
+            <div class="stacks stack2"><i class="fa-brands fa-react fa-3x"></i></div>
+            <div class="stacks stack3"><i class="fa-brands fa-node-js fa-3x"></i></div>
+            <div class="stacks stack4"><i class="fa-brands fa-html5 fa-3x"></i></div>
+            <div class="stacks stack5"><i class="fa-brands fa-sass fa-3x"></i></i></div>
+            <!-- <div class="stacks stack6"><i class="fa-brands fa-github fa-5x"></i></i></div>
+            <div class="stacks stack7"><i class="fa-brands fa-sass fa-5x"></i></div>
+            <div class="stacks stack8"><i class="fa-brands fa-node-js fa-5x"></i></div> -->
+          </div>
+          <!-- <div class="cardStacks">
             <div class="stacks stack1"><i class="fa-brands fa-js fa-5x"></i></div>
             <div class="stacks stack2"><i class="fa-brands fa-react fa-5x"></i></div>
             <div class="stacks stack3"><i class="fa-brands fa-node-js fa-5x"></i></div>
             <div class="stacks stack4"><i class="fa-brands fa-html5 fa-5x"></i></div>
-            <div class="stacks stack5"><i class="fa-brands fa-sass fa-5x"></i></div>
-            <!-- <div class="stacks stack6"><i class="fa-brands fa-html5 fa-5x"></i></div>
+            <div class="stacks stack5"><i class="fa-brands fa-sass fa-5x"></i></i></div>
+            <div class="stacks stack6"><i class="fa-brands fa-github fa-5x"></i></i></div>
             <div class="stacks stack7"><i class="fa-brands fa-sass fa-5x"></i></div>
-            <div class="stacks stack8"><i class="fa-brands fa-node-js fa-5x"></i></div> -->
-          </div>
+            <div class="stacks stack8"><i class="fa-brands fa-node-js fa-5x"></i></div>
+          </div> -->
         </div>
         <div class="gridCard gridCard-box-4" style="grid-area: box-4">
           <p>project</p>
