@@ -577,12 +577,12 @@ i {
 .gridCard-box-3 .titleStack {
   position: absolute;
 }
-.gridCard-box-3:hover, .gridCard-box-3:active {
+.gridCard-box-3:hover, .gridCard-box-3:focus {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
 }
-.gridCard-box-3:hover .stacks, .gridCard-box-3:active .stacks {
+.gridCard-box-3:hover .stacks, .gridCard-box-3:focus .stacks {
   display: unset;
 }
 
