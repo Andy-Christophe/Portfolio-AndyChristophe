@@ -577,10 +577,13 @@ i {
 .gridCard-box-3 .titleStack {
   position: absolute;
 }
-.gridCard-box-3:hover {
+.gridCard-box-3:hover, .gridCard-box-3:active {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
+}
+.gridCard-box-3:hover .stacks, .gridCard-box-3:active .stacks {
+  display: unset;
 }
 
 .gridCard-box-4 {
@@ -628,12 +631,14 @@ i {
   width: 50px;
   z-index: 1000;
   transform: skew(-4deg);
+  display: none;
 }
 .stackShow .stack1 {
-  top: 10%;
-  left: 10%;
-  animation: miniCardMouvement 4s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   animation-delay: -0.2s;
+  display: unset;
 }
 .stackShow .stack2 {
   top: 30%;

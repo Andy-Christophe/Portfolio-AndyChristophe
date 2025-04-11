@@ -310,10 +310,13 @@ i {
     position: absolute;
   }
 
-  &:hover {
+  &:hover, &:active {
     box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
     transform: scale(1.05);
     z-index: 100;
+    .stacks{
+      display: unset;
+    }
   }
 
   // .cardStacks {
@@ -415,6 +418,7 @@ i {
 }
 .stackShow{
 
+  
 
 
   .stacks {
@@ -426,18 +430,23 @@ i {
     z-index: 1000;
     // box-shadow: 4px 3px 0 2px #362f61;
     transform: skew(-4deg);
-
+    display: none;
     
   
   }
   
   .stack1 {
-    top: 10%;
-    left: 10%;
-    animation: miniCardMouvement 4s ease-in-out infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // animation: miniCardMouvement 4s ease-in-out infinite;
     animation-delay: -0.2s;
+    display: unset;
+
+    
+   
   }
-  
+
   .stack2 {
     top: 30%;
     left: 50%;
