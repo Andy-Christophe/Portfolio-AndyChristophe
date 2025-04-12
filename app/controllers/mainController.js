@@ -1,4 +1,4 @@
-import functions from '../functions.js';
+
 
 
 const mainController = {

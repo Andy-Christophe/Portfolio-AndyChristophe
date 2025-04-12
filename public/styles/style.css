@@ -577,13 +577,10 @@ i {
 .gridCard-box-3 .titleStack {
   position: absolute;
 }
-.gridCard-box-3:hover, .gridCard-box-3:focus {
+.gridCard-box-3:hover {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
-}
-.gridCard-box-3:hover .stacks, .gridCard-box-3:focus .stacks {
-  display: unset;
 }
 
 .gridCard-box-4 {
@@ -624,43 +621,48 @@ i {
   width: 40px;
 }
 
-.stackShow .stacks {
+.stacksShow {
+  display: none;
+}
+.stacksShow .stacks {
   border-radius: 0.5rem;
   position: absolute;
   height: 50px;
   width: 50px;
   z-index: 1000;
   transform: skew(-4deg);
-  display: none;
 }
-.stackShow .stack1 {
+.stacksShow .stack1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation-delay: -0.2s;
-  display: unset;
 }
-.stackShow .stack2 {
+.stacksShow .stack2 {
   top: 30%;
   left: 50%;
   animation: miniCardMouvement 4s ease-in-out infinite;
   animation-delay: -1s;
 }
-.stackShow .stack3 {
+.stacksShow .stack3 {
   top: 70%;
   left: 15%;
   animation: miniCardMouvement 4s ease-in-out infinite;
   animation-delay: -0.5s;
 }
-.stackShow .stack4 {
+.stacksShow .stack4 {
   top: 0%;
   left: 80%;
   animation: miniCardMouvement 4s ease-in-out infinite;
   animation-delay: -0.3s;
 }
-.stackShow .stack5 {
+.stacksShow .stack5 {
   top: 80%;
   left: 65%;
   animation: miniCardMouvement 4s ease-in-out infinite;
   animation-delay: -2s;
+}
+
+.show {
+  display: unset;
 }/*# sourceMappingURL=style.css.map */
