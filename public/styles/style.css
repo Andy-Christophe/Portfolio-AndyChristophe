@@ -84,7 +84,7 @@
     translate: 0 8px;
   }
   50% {
-    translate: 0 -16px;
+    translate: 0 -5px;
   }
   100% {
     translate: 0 8px;
@@ -573,9 +573,26 @@ i {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.gridCard-box-3 svg {
+  height: 50px;
+  width: 50px;
 }
 .gridCard-box-3 .titleStack {
   position: absolute;
+  text-align: center;
+  background-color: #0f0d1b;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+.gridCard-box-3 .titleStack:hover {
+  box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+  transform: scale(1.05);
+  z-index: 100;
 }
 .gridCard-box-3:hover {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
@@ -621,48 +638,74 @@ i {
   width: 40px;
 }
 
-.stacksShow {
-  display: none;
-}
-.stacksShow .stacks {
+.stacks {
+  background-color: #1e1a36;
   border-radius: 0.5rem;
-  position: absolute;
   height: 50px;
   width: 50px;
   z-index: 1000;
+  box-shadow: 4px 3px 0 2px #362f61;
   transform: skew(-4deg);
+  text-align: center;
+  padding: 0.3rem;
+  transition: 0.5s;
 }
-.stacksShow .stack1 {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: -0.2s;
+.stacks:hover {
+  transform: scale(1.05) skew(-4deg);
 }
-.stacksShow .stack2 {
-  top: 30%;
-  left: 50%;
-  animation: miniCardMouvement 4s ease-in-out infinite;
-  animation-delay: -1s;
+
+.frontback {
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
 }
-.stacksShow .stack3 {
-  top: 70%;
-  left: 15%;
-  animation: miniCardMouvement 4s ease-in-out infinite;
-  animation-delay: -0.5s;
-}
-.stacksShow .stack4 {
+.frontback h3 {
+  position: absolute;
   top: 0%;
-  left: 80%;
-  animation: miniCardMouvement 4s ease-in-out infinite;
-  animation-delay: -0.3s;
+  z-index: 10000;
 }
-.stacksShow .stack5 {
-  top: 80%;
-  left: 65%;
-  animation: miniCardMouvement 4s ease-in-out infinite;
-  animation-delay: -2s;
+
+.stack1 {
+  animation: splitStack1 1s ease-in-out, miniCardMouvement 4s ease-in-out -1s infinite, fadeIn 1s;
+}
+
+.stack2 {
+  animation: splitStack2 1s ease-in-out, miniCardMouvement 4s ease-in-out -2s infinite, fadeIn 1s;
+}
+
+.stack3 {
+  animation: miniCardMouvement 4s ease-in-out -1.5s infinite, fadeIn 1s;
+}
+
+.stack4 {
+  animation: miniCardMouvement 4s ease-in-out -1.75s infinite, fadeIn 1s;
+}
+
+.stack5 {
+  animation: miniCardMouvement 4s ease-in-out -1.25s infinite, fadeIn 1s;
+}
+
+.stack6 {
+  animation: miniCardMouvement 4s ease-in-out -2s infinite, fadeIn 1s;
+}
+
+.stack7 {
+  animation: miniCardMouvement 4s ease-in-out -1.25s infinite, fadeIn 1s;
+}
+
+.stack8 {
+  animation: miniCardMouvement 4s ease-in-out -1.75s infinite, fadeIn 1s;
+}
+
+.stack9 {
+  animation: miniCardMouvement 4s ease-in-out -1s infinite, fadeIn 1s;
 }
 
 .show {
-  display: unset;
+  display: flex;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
