@@ -45,12 +45,20 @@
         </div>
         <div class="gridCard gridCard-box-3" style="grid-area: box-3" id="allStack" onclick="toggleClass()">
           <script>
+
             function toggleClass() {
+
               const titleStack = document.querySelector('#titleStack');
               const back = document.querySelector('#backend');
               const front = document.querySelector('#frontend');
-              // const container = document.querySelector('#allStack');
-              // container.classList.add('boutonEffect');
+              const container = document.querySelector('#allStack');
+
+
+              function touch() {
+                container.style.transform = 'scale(0.95)';
+                container.style.transition = '0.1s';
+              }
+              container.addEventListener('touchstart', touch)
 
 
               // showStacks.classList.toggle('show');

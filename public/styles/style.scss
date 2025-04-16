@@ -356,11 +356,18 @@ i {
     cursor: pointer;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     transform: scale(0.95);
     transition: 0.1s;
   }
 
+  // @media screen and (min-width: 700px) {
+  //   &:hover {
+  //     transform: scale(0.95);
+  //     transition: 0.1s;
+  //   }
+  // }
 }
 
 
@@ -504,12 +511,3 @@ i {
   display: none;
 }
 
-// .boutonEffect:focus{
-//   transform: scale(0.95);
-//   transition: 0.1s;
-// // }
-// .boutonEffect:active,
-// .boutonEffect:focus {
-//   transform: scale(0.95);
-//   transition: 0.1s;
-// }
