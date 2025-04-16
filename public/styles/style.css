@@ -543,7 +543,7 @@ i {
 }
 
 .gridCard-box-1:hover {
-  box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+  box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.231372549);
   transform: scale(1.05);
   z-index: 100;
 }
@@ -552,6 +552,7 @@ i {
   width: auto;
   height: auto;
   display: flex;
+  position: relative;
 }
 .gridCard-box-2:hover {
   box-shadow: 0px -13px 30px 6px rgba(35, 30, 61, 0.233);
@@ -563,6 +564,12 @@ i {
   position: absolute;
   z-index: 1000;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
 }
 .gridCard-box-2 .allTitle .titleMain {
   text-align: center;
@@ -588,9 +595,10 @@ i {
   padding-right: 2rem;
   border-radius: 1rem;
   transition: 0.5s;
+  animation: fadeIn 1s;
 }
 .gridCard-box-3 .titleStack:hover {
-  box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+  box-shadow: 9px -9px 30px 6px rgba(255, 255, 255, 0.233);
   transform: scale(1.05);
   z-index: 100;
 }
@@ -708,4 +716,9 @@ i {
 
 .hide {
   display: none;
+}
+
+.boutonEffect:active {
+  transform: scale(0.95);
+  transition: 0.1s;
 }/*# sourceMappingURL=style.css.map */
