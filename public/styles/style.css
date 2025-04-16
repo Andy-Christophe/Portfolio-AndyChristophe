@@ -603,8 +603,6 @@ i {
   z-index: 100;
 }
 .gridCard-box-3:hover {
-  box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
-  transform: scale(1.05);
   z-index: 100;
   cursor: pointer;
 }

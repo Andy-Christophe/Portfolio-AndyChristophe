@@ -179,6 +179,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
+ 
 }
 
 @media screen and (min-width: 850px) {
@@ -348,8 +349,8 @@ i {
   }
 
   &:hover {
-    box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
-    transform: scale(1.05);
+    // box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+    // transform: scale(1.05);
     z-index: 100;
     cursor: pointer;
   }
