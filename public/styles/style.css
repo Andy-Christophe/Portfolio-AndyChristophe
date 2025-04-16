@@ -127,6 +127,7 @@ i {
   transition: all 0.5s;
   padding: 1rem;
   padding-right: 0.5rem;
+  z-index: 1000000000;
 }
 .navbar:hover {
   left: 0rem;
@@ -548,25 +549,24 @@ i {
 }
 
 .gridCard-box-2 {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
-  align-items: center;
-}
-.gridCard-box-2 .titleMain {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 2rem;
-  color: white;
-  z-index: 100000;
 }
 .gridCard-box-2:hover {
   box-shadow: 0px -13px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
+}
+.gridCard-box-2 .allTitle {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  flex-direction: column;
+}
+.gridCard-box-2 .allTitle .titleMain {
+  text-align: center;
+  font-size: 2rem;
 }
 
 .gridCard-box-3 {
@@ -598,6 +598,7 @@ i {
   box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
   transform: scale(1.05);
   z-index: 100;
+  cursor: pointer;
 }
 
 .gridCard-box-4 {
@@ -643,7 +644,6 @@ i {
   border-radius: 0.5rem;
   height: 50px;
   width: 50px;
-  z-index: 1000;
   box-shadow: 4px 3px 0 2px #362f61;
   transform: skew(-4deg);
   text-align: center;
@@ -663,7 +663,7 @@ i {
 .frontback h3 {
   position: absolute;
   top: 0%;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .stack1 {
