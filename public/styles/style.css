@@ -606,6 +606,10 @@ i {
   z-index: 100;
   cursor: pointer;
 }
+.gridCard-box-3:active, .gridCard-box-3:focus {
+  transform: scale(0.95);
+  transition: 0.1s;
+}
 
 .gridCard-box-4 {
   background-color: #453c77;
@@ -714,9 +718,4 @@ i {
 
 .hide {
   display: none;
-}
-
-.boutonEffect:active {
-  transform: scale(0.95);
-  transition: 0.1s;
 }/*# sourceMappingURL=style.css.map */

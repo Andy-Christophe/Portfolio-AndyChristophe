@@ -179,7 +179,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
- 
+
 }
 
 @media screen and (min-width: 850px) {
@@ -303,6 +303,7 @@ i {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
+
     p {}
 
     .titleMain {
@@ -353,6 +354,11 @@ i {
     // transform: scale(1.05);
     z-index: 100;
     cursor: pointer;
+  }
+
+  &:active, &:focus {
+    transform: scale(0.95);
+    transition: 0.1s;
   }
 
 }
@@ -498,7 +504,12 @@ i {
   display: none;
 }
 
-.boutonEffect:active {
-  transform: scale(0.95);
-  transition: 0.1s;
-}
+// .boutonEffect:focus{
+//   transform: scale(0.95);
+//   transition: 0.1s;
+// // }
+// .boutonEffect:active,
+// .boutonEffect:focus {
+//   transform: scale(0.95);
+//   transition: 0.1s;
+// }
