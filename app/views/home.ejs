@@ -58,7 +58,12 @@
                 container.style.transform = 'scale(0.95)';
                 container.style.transition = '0.1s';
               }
+              function touchEnd() {
+                container.style.transform = 'scale(1)';
+                container.style.transition = '0.1s';
+              }
               container.addEventListener('touchstart', touch)
+              container.addEventListener('touchend', touchEnd)
 
 
               // showStacks.classList.toggle('show');
