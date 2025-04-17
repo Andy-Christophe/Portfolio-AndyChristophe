@@ -127,7 +127,7 @@ i {
   transition: all 0.5s;
   padding: 1rem;
   padding-right: 0.5rem;
-  z-index: 1000000000;
+  z-index: 100000;
 }
 .navbar:hover {
   left: 0rem;
@@ -200,9 +200,10 @@ i {
 @media screen and (min-width: 0px) {
   .gridAccueil {
     grid-template-columns: 15rem 5rem;
-    grid-template-rows: 25rem 15rem 15rem 15rem 0;
+    grid-template-rows: 25rem 15rem 15rem 40rem 0rem;
     grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
-    padding-top: 25rem;
+    padding-top: 50rem;
+    padding-bottom: 6rem;
   }
   .gridCard-box-5 {
     display: none;
@@ -257,7 +258,7 @@ i {
 @media screen and (min-width: 700px) {
   .gridAccueil {
     grid-template-columns: 35rem 5rem;
-    grid-template-rows: 30rem 15rem 15rem 15rem 0;
+    grid-template-rows: 30rem 15rem 15rem 15rem 0rem;
     grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
     padding-top: 30rem;
   }
@@ -557,6 +558,21 @@ i {
   transform: scale(1.05);
   z-index: 100;
 }
+.gridCard-box-2 .fondPicture {
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.26);
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 0.5rem;
+}
+.gridCard-box-2 .fondPicture .profilPicture {
+  width: 300px;
+}
 .gridCard-box-2 .allTitle {
   display: flex;
   position: absolute;
@@ -611,6 +627,27 @@ i {
 
 .gridCard-box-4 {
   background-color: #453c77;
+  display: flex;
+  justify-content: center;
+}
+.gridCard-box-4 .cardProject {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.gridCard-box-4 .cardProject a {
+  text-decoration: none;
+  color: white;
+}
+.gridCard-box-4 .cardProject a:hover {
+  background-color: #1e1a36;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.gridCard-box-4 .cardProject img {
+  width: 200px;
 }
 .gridCard-box-4:hover {
   box-shadow: 9px 9px 30px 6px rgba(35, 30, 61, 0.231372549);
