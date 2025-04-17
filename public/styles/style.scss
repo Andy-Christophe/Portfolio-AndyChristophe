@@ -29,6 +29,7 @@ html {
   font-family: "Jost";
   transition: 1s;
   background-color: #1e1a36;
+  width: 100%;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   animation: fadeIn 2s;
+
 }
 
 i {
@@ -142,6 +144,7 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
+    padding-top: 2rem;
     padding-bottom: 6rem;
   }
 
@@ -167,7 +170,8 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
-   
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .gridCard-box-5 {
@@ -189,7 +193,8 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
-    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .gridCard-box-5 {
@@ -210,7 +215,8 @@ i {
       "box-1 box-2 box-2"
       "box-3 box-3 box-4"
       "box-5 box-5 box-5";
-   
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .gridCard-box-5 {
@@ -230,7 +236,8 @@ i {
       "box-1 box-2 box-3"
       "box-1 box-2 box-4"
       "box-5 box-5 box-4";
-    
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .gridCard-box-5 {
@@ -250,7 +257,10 @@ i {
       "box-1 box-2 box-3"
       "box-1 box-2 box-4"
       "box-5 box-5 box-4";
-    
+
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .gridCard-box-5 {
@@ -291,12 +301,12 @@ i {
   }
 
   .fondPicture {
-   
+
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.26);
+    background-color: rgba(255, 255, 255, 0.089);
     position: absolute;
     z-index: 1000;
     left: 50%;
@@ -304,9 +314,7 @@ i {
     margin-top: 0.5rem;
 
     .profilPicture {
-
       width: 300px;
-
     }
   }
 
@@ -332,7 +340,23 @@ i {
     }
   }
 
-
+  .boutonContact {
+    z-index: 1000;
+    position: absolute;
+    text-decoration: none;
+    background-color: #1e1a36;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%);
+    transition: 1s;
+    &:hover {
+      box-shadow: -9px -9px 30px 6px #231e3d3b;
+      transform: scale(1.05) translate(-50%);
+    }
+  }
 
 }
 
