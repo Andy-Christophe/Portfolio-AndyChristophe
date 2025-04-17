@@ -202,7 +202,7 @@ i {
     grid-template-columns: 15rem 5rem;
     grid-template-rows: 25rem 15rem 15rem 40rem 0rem;
     grid-template-areas: "box-2 box-2" "box-2 box-2" "box-3 box-1" "box-4 box-4" "box-5 box-5";
-    padding-top: 50rem;
+    padding-top: 60rem;
     padding-bottom: 6rem;
   }
   .gridCard-box-5 {
