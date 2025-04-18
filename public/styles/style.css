@@ -254,6 +254,9 @@ i {
       transform: translateX(-50%) translateY(-10%);
     }
   }
+  .cardProject {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 700px) {
   .gridAccueil {
@@ -310,6 +313,9 @@ i {
     100% {
       transform: translateX(-50%) translateY(-10%);
     }
+  }
+  .cardProject {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 850px) {
@@ -368,6 +374,9 @@ i {
       transform: translateX(-50%) translateY(-10%);
     }
   }
+  .cardProject {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1025px) {
   .gridAccueil {
@@ -424,6 +433,9 @@ i {
     100% {
       transform: translateX(-50%) translateY(-10%);
     }
+  }
+  .cardProject {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -482,6 +494,9 @@ i {
       transform: translateX(-50%) translateY(-10%);
     }
   }
+  .cardProject {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 1600px) {
   .gridAccueil {
@@ -538,6 +553,9 @@ i {
     100% {
       transform: translateX(-50%) translateY(-10%);
     }
+  }
+  .cardProject {
+    flex-direction: column;
   }
 }
 .gridCard {
@@ -603,13 +621,12 @@ i {
   border-radius: 1rem;
   color: white;
   left: 50%;
-  bottom: 10%;
+  bottom: 15%;
   transform: translate(-50%);
-  transition: 1s;
+  transition: 0.5s;
 }
 .gridCard-box-2 .boutonContact:hover {
-  box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.231372549);
-  transform: scale(1.05) translate(-50%);
+  transform: translate(-50%) scale(1.1);
 }
 
 .gridCard-box-3 {
