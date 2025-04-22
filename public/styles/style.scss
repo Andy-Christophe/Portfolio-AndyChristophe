@@ -157,7 +157,7 @@ i {
     background-color: #0f0d1b;
     @include mixin.bubbles;
   }
- 
+
   .cardProject {
     flex-direction: column;
   }
@@ -185,6 +185,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
+
   .cardProject {
     flex-direction: row;
   }
@@ -210,6 +211,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
+
   .cardProject {
     flex-direction: row;
   }
@@ -260,6 +262,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
+
   .cardProject {
     flex-direction: column;
   }
@@ -286,6 +289,7 @@ i {
   .gridCard-box-2 {
     @include mixin.bubbles;
   }
+
   .cardProject {
     flex-direction: column;
   }
@@ -388,7 +392,6 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-
   h3 {}
 
   svg {
@@ -415,15 +418,15 @@ i {
   }
 
   &:hover {
-    // box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
-    // transform: scale(1.05);
+    box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+    transform: scale(1.05);
     z-index: 100;
     cursor: pointer;
   }
 
   &:active,
   &:focus {
-    transform: scale(0.95);
+    transform: scale(1);
     transition: 0.1s;
   }
 
@@ -440,6 +443,8 @@ i {
   background-color: #453c77;
   display: flex;
   justify-content: center;
+  transition: 0.75s;
+  overflow: hidden;
 
   .cardProject {
     display: flex;
@@ -448,32 +453,35 @@ i {
     align-items: center;
     justify-content: center;
 
+    .boutonCard{
+      display: flex;
+    justify-content: space-between;
+
     a {
       text-decoration: none;
       color: white;
-
+      gap: 1rem;
       &:hover {
         background-color: #1e1a36;
         padding: 0.5rem;
         border-radius: 1rem;
       }
     }
+  }
+    .cardCaroussel {
 
-    img {
-      width: 200px;
+      img {
+        width:95%;
+      }
     }
   }
 
 
 
-
-
-
-
   &:hover {
     box-shadow: 9px 9px 30px 6px #231e3d3b;
-    transform: scale(1.05);
-    z-index: 100;
+    transform: scale(1.4) translateX(-20%) translateY(-15%);
+    z-index: 10000;
   }
 }
 
@@ -641,4 +649,16 @@ i {
 
 .hide {
   display: none;
+}
+
+
+
+.gridAccueil:hover .gridCard{
+  opacity: .5;
+  filter: blur(4px);
+}
+
+.gridAccueil .gridCard:hover{
+  opacity: 1;
+  filter: blur(0px);
 }

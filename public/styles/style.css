@@ -656,11 +656,13 @@ i {
   z-index: 100;
 }
 .gridCard-box-3:hover {
+  box-shadow: 9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+  transform: scale(1.05);
   z-index: 100;
   cursor: pointer;
 }
 .gridCard-box-3:active, .gridCard-box-3:focus {
-  transform: scale(0.95);
+  transform: scale(1);
   transition: 0.1s;
 }
 
@@ -668,6 +670,8 @@ i {
   background-color: #453c77;
   display: flex;
   justify-content: center;
+  transition: 0.75s;
+  overflow: hidden;
 }
 .gridCard-box-4 .cardProject {
   display: flex;
@@ -676,22 +680,27 @@ i {
   align-items: center;
   justify-content: center;
 }
-.gridCard-box-4 .cardProject a {
+.gridCard-box-4 .cardProject .boutonCard {
+  display: flex;
+  justify-content: space-between;
+}
+.gridCard-box-4 .cardProject .boutonCard a {
   text-decoration: none;
   color: white;
+  gap: 1rem;
 }
-.gridCard-box-4 .cardProject a:hover {
+.gridCard-box-4 .cardProject .boutonCard a:hover {
   background-color: #1e1a36;
   padding: 0.5rem;
   border-radius: 1rem;
 }
-.gridCard-box-4 .cardProject img {
-  width: 200px;
+.gridCard-box-4 .cardProject .cardCaroussel img {
+  width: 95%;
 }
 .gridCard-box-4:hover {
   box-shadow: 9px 9px 30px 6px rgba(35, 30, 61, 0.231372549);
-  transform: scale(1.05);
-  z-index: 100;
+  transform: scale(1.4) translateX(-20%) translateY(-15%);
+  z-index: 10000;
 }
 
 .gridCard-box-5 {
@@ -816,4 +825,14 @@ i {
 
 .hide {
   display: none;
+}
+
+.gridAccueil:hover .gridCard {
+  opacity: 0.5;
+  filter: blur(4px);
+}
+
+.gridAccueil .gridCard:hover {
+  opacity: 1;
+  filter: blur(0px);
 }/*# sourceMappingURL=style.css.map */
