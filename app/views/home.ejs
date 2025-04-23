@@ -103,6 +103,61 @@
 
 
             }
+
+
+
+
+            function changeProject() {
+
+              const containerCardPreview = document.querySelector('#containerCardPreview');
+              const project1 = document.querySelector('#previewProject1');
+              const project2 = document.querySelector('#previewProject2');
+              const project3 = document.querySelector('#previewProject3');
+
+
+
+
+              function touchProject() {
+                containerCardPreview.style.transform = 'scale(0.9)';
+                containerCardPreview.style.transition = '0.2s';
+              }
+              function touchEndProject() {
+                containerCardPreview.style.transform = 'scale(1)';
+                containerCardPreview.style.transition = '0.2s';
+              }
+              containerCardPreview.addEventListener('touchstart', touchProject)
+              containerCardPreview.addEventListener('touchend', touchEndProject)
+
+
+              // showStacks.classList.toggle('show');
+
+              if (!project2.classList.contains('show') && project1.classList.contains('show') && !project3.classList.contains('show')) {
+                project2.classList.remove('hide');
+                project2.classList.add('show');
+                project1.classList.remove('show');
+                project1.classList.add('hide');
+
+              }
+              else if (project2.classList.contains('show') && !project1.classList.contains('show') && !project3.classList.contains('show')) {
+                project2.classList.remove('show');
+                project2.classList.add('hide');
+                project3.classList.remove('hide');
+                project3.classList.add('show');
+
+
+              }
+              else if (!project2.classList.contains('show') && !project1.classList.contains('show') && project3.classList.contains('show')) {
+                project3.classList.remove('show');
+                project3.classList.add('hide');
+                project1.classList.remove('hide');
+                project1.classList.add('show');
+
+              }
+
+
+
+            }
+
           </script>
 
 
@@ -340,25 +395,45 @@
         </div>
 
 
-        <div class="gridCard gridCard-box-4" style="grid-area: box-4" id="containerCard">
-          <div class="cardProject card1">
-            <div class="cardCaroussel">
-              <img src="/img/moi.jpg" alt="" id="slide1">
-              <!-- <img src="/img/1.png" alt="" id="slide2">
-              <img src="/img/moi.jpg" alt="" id="slide3"> -->
-            </div>
+        <div class="gridCard gridCard-box-4" style="grid-area: box-4" id="containerCardPreview"
+          onclick="changeProject()">
+
+
+          <div class="cardProjectPreview show" id="previewProject1">
+            <img src="/img/1.png" alt="">
+            <h3>Projet 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, quia. Sit, similique nobis facilis
-              dolorem voluptate animi commodi doloribus ad architecto rem perspiciatis. Sed et exercitationem repellat
-              nam minus quia.</p>
-            <div class="boutonCard">
-              <a href="">Lien vers le dépot</a>
-              <a href="">Voir l'app</a>
-            </div>
-            <div class="cardTechno">
-
-
+              dolorem.</p>
+            <div class="boutonCardPreview">
+              <a href="">Voir le dépot</a>
+              <a href="">Project complet</a>
             </div>
           </div>
+
+
+          <div class="cardProjectPreview hide" id="previewProject2">
+            <img src="/img/1.png" alt="">
+            <h3>Projet 2</h3>
+            <p>Oui non oui non Oui non oui non Oui non oui non Oui non oui non Oui non oui non Oui non oui nonv Oui non
+            </p>
+            <div class="boutonCardPreview">
+              <a href="">Voir le dépot</a>
+              <a href="">Project complet</a>
+            </div>
+          </div>
+
+
+          <div class="cardProjectPreview hide" id="previewProject3">
+            <img src="/img/1.png" alt="">
+            <h3>Projet 3</h3>
+            <p>eheeheheheheh ehehhehe ehehehehe hehehehehe eheh e!</p>
+            <div class="boutonCardPreview">
+              <a href="">Voir le dépot</a>
+              <a href="">Project complet</a>
+            </div>
+          </div>
+
+
 
         </div>
 
@@ -367,7 +442,7 @@
 
 
         <div class="gridCard gridCard-box-5" style="grid-area: box-5">
-          <p>Comming soon (minigames)</p>
+          <p>Comming soon</p>
         </div>
       </div>
     </div>

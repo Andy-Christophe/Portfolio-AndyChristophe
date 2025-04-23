@@ -1,5 +1,10 @@
 @use "./mixin.scss";
 
+@font-face {
+  font-family: GameFont;
+  src: url('../font/Daydream.ttf');
+}
+
 @keyframes miniCardMouvement {
   0% {
     translate: 0 8px;
@@ -392,6 +397,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
+
   h3 {}
 
   svg {
@@ -446,48 +452,75 @@ i {
   transition: 0.75s;
   overflow: hidden;
 
-  .cardProject {
-    display: flex;
-    flex-direction: column;
+
+  .cardProjectPreview {
     text-align: center;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    animation: fadeIn 1s;
+    padding: 1rem;
 
-    .boutonCard{
+    @media screen and (max-width: 1300px) {
+      flex-direction: row;
+    }
+
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+
+    .boutonCardPreview {
       display: flex;
-    justify-content: space-between;
+      flex-direction: column;
 
-    a {
-      text-decoration: none;
-      color: white;
-      gap: 1rem;
-      &:hover {
+      a {
+        margin: 0.3rem;
+        display: inline;
+        text-decoration: none;
+        color: white;
         background-color: #1e1a36;
         padding: 0.5rem;
         border-radius: 1rem;
-      }
-    }
-  }
-    .cardCaroussel {
+        transition: 0.5s;
 
-      img {
-        width:95%;
+        &:hover {
+          padding: 0.5rem;
+          border-radius: 1rem;
+          transform: scale(1.1);
+        }
       }
     }
+
+    img {
+      border-radius: 1rem;
+      width: 105%;
+    }
+
   }
 
 
 
   &:hover {
     box-shadow: 9px 9px 30px 6px #231e3d3b;
-    transform: scale(1.4) translateX(-20%) translateY(-15%);
+    transform: scale(1.05);
     z-index: 10000;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    transform: scale(1);
+    transition: 0.1s;
   }
 }
 
 .gridCard-box-5 {
   background-color: #453c77;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: GameFont, sans-serif;
   &:hover {
     box-shadow: -9px 9px 30px 6px rgba(35, 30, 61, 0.233);
     transform: scale(1.05);
@@ -653,12 +686,12 @@ i {
 
 
 
-.gridAccueil:hover .gridCard{
+.gridAccueil:hover .gridCard {
   opacity: .5;
   filter: blur(4px);
 }
 
-.gridAccueil .gridCard:hover{
+.gridAccueil .gridCard:hover {
   opacity: 1;
   filter: blur(0px);
 }
