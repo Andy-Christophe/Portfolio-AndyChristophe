@@ -154,9 +154,6 @@ i {
     padding-bottom: 6rem;
   }
 
-  .gridCard-box-5 {
-    display: none;
-  }
 
   .gridCard-box-2 {
     background-color: #0f0d1b;
@@ -180,12 +177,9 @@ i {
       "box-4 box-4"
       "box-5 box-5";
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
   }
 
-  .gridCard-box-5 {
-    display: none;
-  }
 
   .gridCard-box-2 {
     @include mixin.bubbles;
@@ -206,12 +200,9 @@ i {
       "box-4 box-4"
       "box-5 box-5";
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
   }
 
-  .gridCard-box-5 {
-    display: none;
-  }
 
   .gridCard-box-2 {
     @include mixin.bubbles;
@@ -235,9 +226,6 @@ i {
     padding-bottom: 2rem;
   }
 
-  .gridCard-box-5 {
-    display: flex;
-  }
 
   .gridCard-box-2 {
     @include mixin.bubbles;
@@ -258,10 +246,6 @@ i {
       "box-5 box-5 box-4";
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .gridCard-box-5 {
-    display: flex;
   }
 
   .gridCard-box-2 {
@@ -287,9 +271,6 @@ i {
     padding-bottom: 2rem;
   }
 
-  .gridCard-box-5 {
-    display: flex;
-  }
 
   .gridCard-box-2 {
     @include mixin.bubbles;
@@ -460,14 +441,17 @@ i {
     flex-direction: column;
     animation: fadeIn 1s;
     padding: 1rem;
+    
 
     @media screen and (max-width: 1300px) {
       flex-direction: row;
+      
     }
 
 
     @media screen and (max-width: 700px) {
       flex-direction: column;
+      
     }
 
     .boutonCardPreview {
@@ -495,6 +479,13 @@ i {
     img {
       border-radius: 1rem;
       width: 105%;
+      @media screen and (max-width: 1300px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 700px) {
+        width: 105%;
+      }
+
     }
 
   }
@@ -521,6 +512,10 @@ i {
   justify-content: center;
   align-items: center;
   font-family: GameFont, sans-serif;
+
+  @media screen and (max-width: 1025px) {
+    display: none;
+  }
   &:hover {
     box-shadow: -9px 9px 30px 6px rgba(35, 30, 61, 0.233);
     transform: scale(1.05);
@@ -687,8 +682,8 @@ i {
 
 
 .gridAccueil:hover .gridCard {
-  opacity: .5;
-  filter: blur(4px);
+  opacity: .4;
+  filter: blur(1px);
 }
 
 .gridAccueil .gridCard:hover {
