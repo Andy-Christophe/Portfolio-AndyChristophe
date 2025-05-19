@@ -77,6 +77,10 @@ body {
   justify-content: center;
   align-items: center;
   animation: fadeIn 2s;
+  margin: 1.5rem;
+  @media screen and (max-width: 1025px){
+    padding-bottom: 8rem;
+  }
 
 }
 
@@ -179,7 +183,7 @@ i {
   .navbar {
     top: unset;
     left: unset;
-    bottom: 1%;
+    bottom: 0;
     z-index: 1000;
     border-radius: 1rem;
 
@@ -214,8 +218,6 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
-    padding-top: 2rem;
-    padding-bottom: 6rem;
   }
 
 
@@ -240,8 +242,6 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
-    padding-top: 2rem;
-    padding-bottom: 6rem;
   }
 
 
@@ -263,8 +263,6 @@ i {
       "box-3 box-1"
       "box-4 box-4"
       "box-5 box-5";
-    padding-top: 2rem;
-    padding-bottom: 6rem;
   }
 
 
@@ -286,8 +284,6 @@ i {
       "box-1 box-2 box-2"
       "box-3 box-3 box-4"
       "box-5 box-5 box-5";
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
 
@@ -308,8 +304,7 @@ i {
       "box-1 box-2 box-3"
       "box-1 box-2 box-4"
       "box-5 box-5 box-4";
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  
   }
 
   .gridCard-box-2 {
@@ -330,9 +325,6 @@ i {
       "box-1 box-2 box-4"
       "box-5 box-5 box-4";
 
-
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
 
@@ -541,7 +533,7 @@ i {
   &:hover {
     box-shadow: 9px 9px 30px 6px #231e3d3b;
     transform: scale(1.05);
-    z-index: 10000;
+    z-index: 100;
     cursor: pointer;
   }
 
