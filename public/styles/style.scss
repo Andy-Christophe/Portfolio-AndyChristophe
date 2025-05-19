@@ -182,7 +182,7 @@ i {
     bottom: 1%;
     z-index: 1000;
     border-radius: 1rem;
-    
+
 
     &:hover {
       left: unset;
@@ -729,8 +729,12 @@ i {
 
 
 .gridAccueil:hover .gridCard {
-  opacity: .4;
-  filter: blur(1px);
+  @media screen and (min-width: 1025px) {
+    opacity: .4;
+    filter: blur(1px);
+  }
+
+
 }
 
 .gridAccueil .gridCard:hover {

@@ -893,9 +893,11 @@ i {
   display: none;
 }
 
-.gridAccueil:hover .gridCard {
-  opacity: 0.4;
-  filter: blur(1px);
+@media screen and (min-width: 1025px) {
+  .gridAccueil:hover .gridCard {
+    opacity: 0.4;
+    filter: blur(1px);
+  }
 }
 
 .gridAccueil .gridCard:hover {
