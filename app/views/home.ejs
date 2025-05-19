@@ -1,5 +1,9 @@
 <%- include('partials/header'); -%>
   <main>
+    <div class="popup">
+      <p>Ce portfolio est en cours de travaux </p>
+      <img class="popupImg" src="/img/3967195.png" alt="">
+    </div>
     <div class="flexAccueil">
       <div class="gridAccueil">
         <div class="gridCard gridCard-box-1" style="grid-area: box-1">
@@ -10,14 +14,14 @@
           </div>
         </div>
         <!-- <svg xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <filter id="goo">
-                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                        <feBlend in="SourceGraphic" in2="goo" />
-                      </filter>
-                    </defs>
-                  </svg>
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
       <!-- VOIR SI COMMENT LE METTRE DANS LE CSS -->
         <div class="gridCard gridCard-box-2" style="grid-area: box-2" id="about">
           <svg class="svgblur" xmlns="http://www.w3.org/2000/svg">
@@ -36,8 +40,8 @@
           <div class="allTitle">
 
             <h1 class="titleMain">FULL-STACK <span>DEVELOPER</span></h1>
-            <p>Salut moi c'est Andy, je suis Full-Stack développeur basé à Paris, Lorem ipsum dolor, sit amet
-              consectetur adipisicing elit. Porro tempore magni in harum, sed praesentium ex</p>
+            <p>Salut moi c'est Andy, je suis Full-Stack développeur basé à Paris, actuellement en formation
+              Développement web et accessibilité et en recherche de stage.</p>
           </div>
           <div class="circle-container">
             <div class="circle1"></div>
@@ -47,7 +51,7 @@
             <div class="circle5"></div>
           </div>
           <div>
-            <a href="" class="boutonContact">Contactez moi !</a>
+            <a href="mailto:andy.christ971@gmail.com" class="boutonContact">Contactez moi !</a>
           </div>
         </div>
         <div class="gridCard gridCard-box-3" style="grid-area: box-3" id="allStack" onclick="toggleClass()">
@@ -202,30 +206,103 @@
                   d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z"
                   fill="white" />
               </svg></div>
-            <div class="stacks stack5"><svg width="800px" height="800px" viewBox="0 -51 256 256" version="1.1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                preserveAspectRatio="xMidYMid">
-                <defs>
-                  <linearGradient x1="-2.77777778%" y1="32%" x2="100%" y2="67.5555556%" id="linearGradient-1">
-                    <stop stop-color="#2298BD" offset="0%">
 
-                    </stop>
-                    <stop stop-color="#0ED7B5" offset="100%">
-
-                    </stop>
+            <div class="stacks stack5">
+              <svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+                <title>Vite</title>
+                <path
+                  d="M29.8836 6.146L16.7418 29.6457c-.2714.4851-.9684.488-1.2439.0052L2.0956 6.1482c-.3-.5262.1498-1.1635.746-1.057l13.156 2.3516a.7144.7144 0 00.2537-.0004l12.8808-2.3478c.5942-.1083 1.0463.5241.7515 1.0513z"
+                  fill="url(#paint0_linear)" />
+                <path
+                  d="M22.2644 2.0069l-9.7253 1.9056a.3571.3571 0 00-.2879.3294l-.5982 10.1038c-.014.238.2045.4227.4367.3691l2.7077-.6248c.2534-.0585.4823.1647.4302.4194l-.8044 3.9393c-.0542.265.1947.4918.4536.4132l1.6724-.5082c.2593-.0787.5084.1487.4536.414l-1.2784 6.1877c-.08.387.4348.598.6495.2662L16.5173 25 24.442 9.1848c.1327-.2648-.096-.5667-.387-.5106l-2.787.5379c-.262.0505-.4848-.1934-.4109-.4497l1.8191-6.306c.074-.2568-.1496-.5009-.4118-.4495z"
+                  fill="url(#paint1_linear)" />
+                <defs id="defs50">
+                  <linearGradient id="paint0_linear" x1="6.0002" y1="32.9999" x2="235" y2="344"
+                    gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)">
+                    <stop stop-color="#41D1FF" id="stop38" />
+                    <stop offset="1" stop-color="#BD34FE" id="stop40" />
+                  </linearGradient>
+                  <linearGradient id="paint1_linear" x1="194.651" y1="8.8182" x2="236.076" y2="292.989"
+                    gradientUnits="userSpaceOnUse" gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)">
+                    <stop stop-color="#FFEA83" id="stop43" />
+                    <stop offset=".0833" stop-color="#FFDD35" id="stop45" />
+                    <stop offset="1" stop-color="#FFA800" id="stop47" />
                   </linearGradient>
                 </defs>
-                <g>
-                  <title>TailwindCSS</title>
-                  <path
-                    d="M128,-1.0658141e-14 C93.8666667,-1.0658141e-14 72.5333333,17.0666667 64,51.2 C76.8,34.1333333 91.7333333,27.7333333 108.8,32 C118.537481,34.4343704 125.497363,41.4985481 133.201067,49.3184 C145.750756,62.0567704 160.275437,76.8 192,76.8 C226.133333,76.8 247.466667,59.7333333 256,25.6 C243.2,42.6666667 228.266667,49.0666667 211.2,44.8 C201.462519,42.3656296 194.502637,35.3014519 186.798933,27.4816 C174.249244,14.7432296 159.724563,-1.0658141e-14 128,-1.0658141e-14 Z M64,76.8 C29.8666667,76.8 8.53333333,93.8666667 0,128 C12.8,110.933333 27.7333333,104.533333 44.8,108.8 C54.5374815,111.23437 61.497363,118.298548 69.2010667,126.1184 C81.7507556,138.85677 96.275437,153.6 128,153.6 C162.133333,153.6 183.466667,136.533333 192,102.4 C179.2,119.466667 164.266667,125.866667 147.2,121.6 C137.462519,119.16563 130.502637,112.101452 122.798933,104.2816 C110.249244,91.5432296 95.724563,76.8 64,76.8 Z"
-                    fill="url(#linearGradient-1)">
+              </svg>
+            </div>
+            <div class=" stacks stack1">
+              <svg width="800px" height="800px" viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
 
-                  </path>
+                <title>Parcel</title>
+                <desc>Created with Sketch.</desc>
+                <defs>
+
+                </defs>
+                <g id="build-tools/parcel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="container" transform="translate(2.000000, 2.000000)" fill="#FFFFFF" fill-rule="nonzero"
+                    stroke="#2D1C05" stroke-width="2">
+                    <rect id="mask" x="-1" y="-1" width="71" height="71" rx="14">
+
+                    </rect>
+                  </g>
+                  <g id="package" transform="translate(11.000000, 14.000000)" fill-rule="nonzero">
+                    <polygon id="Shape" fill="#D38C0D"
+                      points="33.4790323 20.1943548 50.9177419 10.0766129 33.4790323 0.0411290323 16.1225806 10.241129">
+
+                    </polygon>
+                    <g id="Group" fill="#EFBB67">
+                      <polygon id="Shape"
+                        points="17.5209677 20.1943548 34.7951613 10.158871 17.5209677 0.0411290323 0 10.158871">
+
+                      </polygon>
+                      <polygon id="Shape"
+                        points="42.7741935 35.0008065 25.5 45.1185484 8.22580645 35.0008065 8.22580645 14.8475806 25.5 4.72983871 42.7741935 14.8475806">
+
+                      </polygon>
+                    </g>
+                    <polyline id="Shape" fill="#D38C0D"
+                      points="25.5 4.72983871 42.7741935 14.8475806 42.7741935 35.0008065 25.5 45.1185484">
+
+                    </polyline>
+                    <polygon id="Shape" fill="#EFBB67"
+                      points="33.5612903 29.4895161 50.9177419 19.5362903 33.4790323 9.41854839 16.0403226 19.5362903">
+
+                    </polygon>
+                    <polygon id="Shape" fill="#D38C0D"
+                      points="17.5209677 29.6540323 34.8774194 19.4540323 17.5209677 9.41854839 0 19.5362903">
+
+                    </polygon>
+                    <polygon id="Shape" fill="#704A0E"
+                      points="25.5822581 24.9653226 42.7741935 14.8475806 25.5822581 4.72983871 8.06129032 14.8475806">
+
+                    </polygon>
+                    <polyline id="Shape" fill="#513307"
+                      points="25.5822581 24.9653226 42.7741935 14.8475806 25.5822581 4.72983871">
+
+                    </polyline>
+                    <polygon id="Shape" fill="#2D1C05"
+                      points="25.5822581 24.9653226 29.283871 22.7443548 25.5822581 20.6056452 21.8806452 22.7443548">
+
+                    </polygon>
+                    <g id="Group" transform="translate(37.838710, 27.556452)" fill="#0DD396">
+                      <polygon id="Shape"
+                        points="0 8.59596774 4.11290323 6.21048387 4.11290323 4.89435484 0 7.27983871">
+
+                      </polygon>
+                      <polygon id="Shape" points="0 6.21048387 4.11290323 3.825 4.11290323 2.50887097 0 4.89435484">
+
+                      </polygon>
+                      <polygon id="Shape" points="0 3.825 4.11290323 1.43951613 4.11290323 0.0411290323 0 2.50887097">
+
+                      </polygon>
+                    </g>
+                  </g>
                 </g>
-              </svg></div>
+              </svg>
 
-
+            </div>
           </div>
 
           <div class="frontback hide" id="backend">
@@ -385,10 +462,14 @@
               </svg>
             </div>
           </div>
-          <!-- <div class="stacks stack6"><i class="fa-brands fa-github fa-5x"></i></i></div>
-            <div class="stacks stack7"><i class="fa-brands fa-sass fa-5x"></i></div>
-            <div class="stacks stack8"><i class="fa-brands fa-node-js fa-5x"></i></div> -->
 
+          <div class="containertouchme">
+            <div class="touchme">
+              <span class="material-symbols-outlined">
+                touch_app
+              </span>
+            </div>
+          </div>
 
         </div>
 
@@ -415,8 +496,8 @@
             <img src="/img/1.png">
             <div class="textCardPreview">
               <h3>Projet 2</h3>
-              <p>Oui non oui non Oui non oui non Oui non oui non Oui non oui non Oui non oui non Oui non oui nonv Oui
-                non
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad neque fugiat quibusdam assumenda suscipit
+                a officiis.
               </p>
             </div>
             <div class="boutonCardPreview">
@@ -430,7 +511,8 @@
             <img src="/img/1.png" alt="">
             <div class="textCardPreview">
               <h3>Projet 3</h3>
-              <p>eheeheheheheh ehehhehe ehehehehe hehehehehe eheh e!</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio sapiente est provident ipsum nobis
+                labore eum molestiae</p>
             </div>
             <div class="boutonCardPreview">
               <a href="">Voir le dépot</a>
@@ -438,7 +520,13 @@
             </div>
           </div>
 
-
+          <div class="containertouchme">
+            <div class="touchme">
+              <span class="material-symbols-outlined">
+                touch_app
+              </span>
+            </div>
+          </div>
 
         </div>
 
