@@ -126,6 +126,20 @@
     left: -17rem;
   }
 }
+@keyframes popupmobile {
+  0% {
+    top: -20rem;
+  }
+  30% {
+    top: -0.1rem;
+  }
+  70% {
+    top: -0.1rem;
+  }
+  100% {
+    top: -20rem;
+  }
+}
 html {
   font-family: "Jost";
   transition: 1s;
@@ -168,6 +182,23 @@ i {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   animation: popup 4s 2s;
+}
+@media screen and (max-width: 1025px) {
+  .popup {
+    top: -20rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 0;
+    animation: popupmobile 4s 2s;
+  }
+}
+@media screen and (max-width: 700px) {
+  .popup {
+    transform: unset;
+    left: unset;
+  }
 }
 .popup .popupImg {
   width: 3rem;

@@ -50,6 +50,7 @@
 @keyframes popup {
   0% {
     left: -17rem;
+
   }
 
   50% {
@@ -58,6 +59,27 @@
 
   100% {
     left: -17rem;
+  }
+}
+
+@keyframes popupmobile {
+  0% {
+    top: -20rem;
+
+  }
+
+  30% {
+    top: -0.1rem;
+
+  }
+
+  70% {
+    top: -0.1rem;
+
+  }
+
+  100% {
+    top: -20rem;
   }
 }
 
@@ -78,7 +100,8 @@ body {
   align-items: center;
   animation: fadeIn 2s;
   margin: 1.5rem;
-  @media screen and (max-width: 1025px){
+
+  @media screen and (max-width: 1025px) {
     padding-bottom: 8rem;
   }
 
@@ -103,6 +126,22 @@ i {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   animation: popup 4s 2s;
+
+  @media screen and (max-width: 1025px) {
+    top: -20rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 0;
+    animation: popupmobile 4s 2s;
+
+  }
+
+  @media screen and (max-width: 700px) {
+    transform: unset;
+    left: unset;
+  }
 
   .popupImg {
     width: 3rem;
@@ -304,7 +343,7 @@ i {
       "box-1 box-2 box-3"
       "box-1 box-2 box-4"
       "box-5 box-5 box-4";
-  
+
   }
 
   .gridCard-box-2 {
@@ -717,7 +756,6 @@ i {
 .hide {
   display: none;
 }
-
 
 
 .gridAccueil:hover .gridCard {
