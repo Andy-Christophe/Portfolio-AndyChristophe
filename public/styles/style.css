@@ -212,7 +212,6 @@ i {
 
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
-  border: 1px solid #221d3d;
   position: fixed;
   left: -5rem;
   top: 50%;
@@ -963,4 +962,13 @@ i {
 .containertouchme .touchme::before {
   filter: blur(1rem);
   opacity: 0;
+}
+
+.gridContact {
+  display: grid;
+  justify-content: center;
+}
+
+.flexContact {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

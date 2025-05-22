@@ -157,7 +157,6 @@ i {
 
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
-  border: 1px solid #221d3d;
   position: fixed;
   left: -5rem;
   top: 50%;
@@ -172,6 +171,7 @@ i {
   &:hover {
     left: 0rem;
     box-shadow: -9px -9px 30px 6px rgba(35, 30, 61, 0.233);
+    
   }
 
   nav {
@@ -819,4 +819,13 @@ i {
     ;
   }
 
+}
+
+.gridContact{
+  display: grid;
+  justify-content: center;
+}
+
+.flexContact{
+  display: flex;
 }
