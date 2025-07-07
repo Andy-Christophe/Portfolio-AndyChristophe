@@ -8,8 +8,8 @@ const mainController = {
    about: function (req, res) {
       res.render('about');
    },
-   projects: function (req, res) {
-      res.render('projects');
+   contact: function (req, res) {
+      res.render('contact');
    },
 
    notFound: function (req, res) {
