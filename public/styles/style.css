@@ -83,11 +83,6 @@
   font-family: GameFont;
   src: url("../font/Daydream.ttf");
 }
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 @keyframes rotationBouton {
   from {
     --angle: 0deg ;
@@ -213,7 +208,7 @@ i {
 .navbar {
   background: linear-gradient(127deg, #453c77, #221d3d, #0f0d1b);
   position: fixed;
-  left: -5rem;
+  left: -6rem;
   top: 50%;
   transform: translate(0, -50%);
   border-top-right-radius: 1rem;
@@ -964,11 +959,47 @@ i {
   opacity: 0;
 }
 
-.gridContact {
-  display: grid;
+.containerContact {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.containerContact .cardContact {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: #453c77;
+  width: 600px;
+  height: 400px;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+.containerContact .cardContact .linkContact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
 }
 
-.flexContact {
+.containerAbout {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.containerAbout .cardAbout {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  background-color: #453c77;
+  width: 900px;
+  height: 900px;
+  border-radius: 1rem;
+  transition: all 0.5s;
 }/*# sourceMappingURL=style.css.map */

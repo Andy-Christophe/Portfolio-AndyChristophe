@@ -1,9 +1,5 @@
 <%- include('partials/header'); -%>
   <main>
-    <div class="popup" id="popup">
-      <p>Ce portfolio est en cours de travaux </p>
-      <img class="popupImg" src="/img/3967195.png" alt="">
-    </div>
     <div class="flexAccueil">
       <div class="gridAccueil">
         <div class="gridCard gridCard-box-1" style="grid-area: box-1">
@@ -114,7 +110,6 @@
               const containerCardPreview = document.querySelector('#containerCardPreview');
               const project1 = document.querySelector('#previewProject1');
               const project2 = document.querySelector('#previewProject2');
-              const project3 = document.querySelector('#previewProject3');
 
 
 
@@ -133,32 +128,21 @@
 
               // showStacks.classList.toggle('show');
 
-              if (!project2.classList.contains('show') && project1.classList.contains('show') && !project3.classList.contains('show')) {
-                project2.classList.remove('hide');
-                project2.classList.add('show');
+              if (project1.classList.contains('show') && !project2.classList.contains('show')) {
                 project1.classList.remove('show');
                 project1.classList.add('hide');
+                project2.classList.remove('hide');
+                project2.classList.add('show');
 
               }
-              else if (project2.classList.contains('show') && !project1.classList.contains('show') && !project3.classList.contains('show')) {
+              else if (!project1.classList.contains('show') && project2.classList.contains('show')) {
                 project2.classList.remove('show');
                 project2.classList.add('hide');
-                project3.classList.remove('hide');
-                project3.classList.add('show');
-
-
-              }
-              else if (!project2.classList.contains('show') && !project1.classList.contains('show') && project3.classList.contains('show')) {
-                project3.classList.remove('show');
-                project3.classList.add('hide');
                 project1.classList.remove('hide');
                 project1.classList.add('show');
 
-              }
-
-
-
             }
+          }
 
           </script>
 
@@ -482,7 +466,7 @@
             <img src="/img/logopince.png" alt="">
             <div class="textCardPreview">
               <h3>Projet 'La pince'</h3>
-              <p>Application de gestion de budget (en cours)</p>
+              <p>Application de gestion de finances</p>
             </div>
             <div class="boutonCardPreview">
               <a href="https://lapinceisfront.vercel.app/">Project complet</a>
@@ -490,7 +474,17 @@
           </div>
 
 
-          
+          <div class="cardProjectPreview hide" id="previewProject2">
+            <img src="/img/logopince.png" alt="">
+            <div class="textCardPreview">
+              <h3>Projet 'KingChris287k'</h3>
+              <p>Application de création de critique d'oeuvre</p>
+            </div>
+            <div class="boutonCardPreview">
+              <a href="https://kingchris287.vercel.app/">Project complet</a>
+            </div>
+          </div>
+
 
           <div class="containertouchme">
             <div class="touchme">
@@ -501,7 +495,6 @@
           </div>
 
         </div>
-
 
 
 
