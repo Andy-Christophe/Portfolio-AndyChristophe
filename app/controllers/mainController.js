@@ -8,10 +8,6 @@ const mainController = {
    about: function (req, res) {
       res.render('about');
    },
-   contact: function (req, res) {
-      res.render('contact');
-   },
-
    notFound: function (req, res) {
       res.status(404).render('error');
    }

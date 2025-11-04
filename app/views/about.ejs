@@ -1,11 +1,164 @@
 <%- include('partials/header'); -%>
-<main>
-<div class="containerAbout">
-    <div class="cardAbout">
-        <h1>À propos de moi</h1>
-        <p>Bonjour! Je m'appelle Andy Christophe, un développeur web passionné basé en France. Avec une solide expérience en développement front-end et back-end, je crée des sites web et des applications performantes et esthétiques. Mon expertise inclut HTML, CSS, JavaScript, ainsi que des frameworks populaires comme React et Node.js. Je suis toujours à la recherche de nouveaux défis pour améliorer mes compétences et contribuer à des projets innovants. N'hésitez pas à me contacter pour discuter de collaborations potentielles!</p>
-    </div>
+    <main>
+        <div class="flexAbout">
+            <div class="gridAbout">
+                <!-- En-tête avec titre -->
+                <div class="gridCard gridCard-about-header" style="grid-area: header">
+                    <div class="about-header-content">
+                        <h1>À propos de moi - Christophe Andy</h1>
+                        <p class="subtitle">Développeur Full-Stack</p>
+                        <a href="/cv/Andy_Christophe_CV.pdf" download="Andy_Christophe_CV.pdf" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+                                <path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/>
+                            </svg>
+                            Télécharger mon CV
+                        </a>
+                    </div>
+                </div>
 
-</div>
-</main>    
-<%- include('partials/footer'); -%>
+                <!-- Carte Profil / Introduction -->
+                <div class="gridCard gridCard-about-intro" style="grid-area: intro">
+                    <div class="about-section">
+                        <div class="stacks stack1 section-icon">👨‍💻</div>
+                        <h2>Qui suis-je ?</h2>
+                        <p>
+                            Développeur Full-Stack basé à Paris, je suis arrivé à la fin de ma formation
+                            "Développement web et accessibilité". Passionné par la création d'applications
+                            web modernes et accessibles, je souhaite mettre mes compétences au service de projets
+                            innovants.
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Carte Formation -->
+                <div class="gridCard gridCard-about-education" style="grid-area: education">
+                    <div class="about-section">
+                        <div class="stacks stack2 section-icon">🎓</div>
+                        <h2>Formation</h2>
+                        <div class="timeline-item">
+                            <h3>Développement Web et Accessibilité</h3>
+                            <p class="timeline-date">2024 - 2025</p>
+                            <p>Formation spécialisée dans le développement web moderne avec un focus sur l'accessibilité
+                                et les bonnes pratiques.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Web Marketing</h3>
+                            <p class="timeline-date">2023</p>
+                            <p>Formation axée sur les stratégies de marketing digital.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte Expériences Professionnelles -->
+                <div class="gridCard gridCard-about-experience" style="grid-area: experience">
+                    <div class="about-section">
+                        <div class="stacks stack3 section-icon">💼</div>
+                        <h2>Expériences Professionnelles</h2>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h3>Stage Développeur Full-Stack</h3>
+                                <span class="experience-date">Fini Juillet 2025 - Octobre 2025</span>
+                            </div>
+                            <p class="experience-company">Auto entrepreneur</p>
+                            <ul class="experience-tasks">
+                                <li>Déterminaison des besoins clients</li>
+                                <li>Conception des maquettes responsive avec Figma</li>
+                                <li>Développement d’un frontend en React.js</li>
+                                <li>Développement d’un backend avec Supabase</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h3>Préparateur de commandes</h3>
+                                <span class="experience-date">2022 - 2024</span>
+                            </div>
+                            <p class="experience-company">Diadom</p>
+                            <ul class="experience-tasks">
+                                <li>Conception, emballage et envoi des différents colis médicaux</li>
+                                <li>Réception de palettes (gerbeurs, transpalettes...)</li>
+                                <li>Dépannage informatique</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <h3>Formateur</h3>
+                                <span class="experience-date">2019 - 2022</span>
+                            </div>
+                            <p class="experience-company">McDonald's</p>
+                            <ul class="experience-tasks">
+                                <li>Formation et intégration des nouveaux équipiers</li>
+                                <li>Maintenance et programmation des machines</li>
+                                <li>Aide aux tâches administratives, mise en place de nouvelles campagne</li>
+                                <li>Gestion de terrain</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte Compétences -->
+                <div class="gridCard gridCard-about-skills" style="grid-area: skills">
+                    <div class="about-section">
+                        <div class="stacks stack4 section-icon">⚡</div>
+                        <h2>Compétences</h2>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Frontend</h4>
+                                <ul>
+                                    <li>React.js</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML5 / CSS3</li>
+                                    <li>SASS</li>
+
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Backend</h4>
+                                <ul>
+                                    <li>Node.js / Express</li>
+                                    <li>Supabase</li>
+                                    <li>MongoDB</li>
+                                    <li>PostgreSQL</li>
+
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Outils</h4>
+                                <ul>
+                                    <li>Git / GitHub</li>
+                                    <li>VS Code</li>
+                                    <li>Figma</li>
+                                    <li>Vercel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Carte Centres d'intérêt -->
+                <div class="gridCard gridCard-about-interests" style="grid-area: interests">
+                    <div class="about-section">
+                        <div class="stacks stack2 section-icon">🎮</div>
+                        <h2>Centres d'intérêt</h2>
+                        <div class="interests-list">
+                            <span class="interest-tag">Développement Web</span>
+                            <span class="interest-tag">IA</span>
+                            <span class="interest-tag">UI/UX Design</span>
+                            <span class="interest-tag">Gaming</span>
+                            <span class="interest-tag">Technologie</span>
+                            <span class="interest-tag">Hardware</span>
+                            <span class="interest-tag">Football</span>
+                            <span class="interest-tag">Audiovisuel</span>
+                            <span class="interest-tag">Sport</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer'); -%>
